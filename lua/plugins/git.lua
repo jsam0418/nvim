@@ -17,5 +17,8 @@ return {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope.nvim",
 		},
+		config = function()
+			vim.keymap.set("n", "<leader>go", ":Neogit kind=vsplit<CR>", {})
+		end,
 	},
 }

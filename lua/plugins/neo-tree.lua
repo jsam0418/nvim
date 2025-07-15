@@ -14,6 +14,6 @@ return {
     -- fill any relevant options here
   },
   config = function()
-    vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>')
-  end
+    vim.keymap.set("n", "<C-n>", ":Neotree toggle<CR>")
+  end,
 }
