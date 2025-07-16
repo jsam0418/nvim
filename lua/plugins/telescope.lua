@@ -9,6 +9,10 @@ return {
       vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
       vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
       vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+      vim.keymap.set("n", "<leader>fc", builtin.current_buffer_fuzzy_find, { desc = "Telescope live grep current buffer" })
+      vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Telescope list document symbols in current buffer" })
+      vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "Telescope list references from lsp" })
+      vim.keymap.set("n", "<leader>fd", builtin.lsp_definitions, { desc = "Telescope list symbols lsp_definitions" })
     end,
   },
   {

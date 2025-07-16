@@ -11,7 +11,7 @@ return {
     opts = {},
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls" },
+        ensure_installed = { "lua_ls", "clangd", "jsonls", "pyright" },
       })
     end,
   },
@@ -33,6 +33,26 @@ return {
               "--completion-style=detailed",
               "--experimental-modules-support",
               "--query-driver=/usr/bin/clang++,/usr/bin/g++",
+            },
+          },
+        },
+      })
+      vim.lsp.config("jsonls", {
+        settings = {
+          ["jsonls"] = {
+            validate = { enable = true },
+          },
+        },
+      })
+      vim.lsp.config("pyright", {
+        settings = {
+          ["pyright"] = {
+            python = {
+              analysis = {
+                typeCheckingMode = "basic",
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+              },
             },
           },
         },
