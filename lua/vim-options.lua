@@ -8,4 +8,6 @@ vim.api.nvim_set_keymap("i", "<C-h>", "<Left>", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("i", "<C-j>", "<Down>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-k>", "<Up>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-l>", "<Right>", { noremap = true, silent = true })
--- A vim remap of "*y to copy into system clipboard
+
+vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })

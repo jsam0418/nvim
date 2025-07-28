@@ -64,9 +64,6 @@ return {
       vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
       vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
       vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
-      vim.keymap.set("n", "<leader>f", function()
-        vim.lsp.buf.format({ async = true })
-      end, {})
       vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, {})
       vim.keymap.set("n", "]d", vim.diagnostic.goto_next, {})
       vim.keymap.set("n", "gl", vim.diagnostic.open_float, {})
@@ -89,8 +86,8 @@ return {
         signs = true,
 
         -- optional visual bells
-        underline = true,     -- underline the offending range
-        severity_sort = true, -- most severe first
+        underline = true,         -- underline the offending range
+        severity_sort = true,     -- most severe first
         update_in_insert = false, -- wait until you leave insert mode
       })
 
