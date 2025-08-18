@@ -15,4 +15,23 @@ return {
       desc = "Buffer Local Keymaps (which-key)",
     },
   },
+  config = function()
+    local wk = require("which-key")
+
+    wk.add({
+      {
+        "<leader>rr",
+        function()
+          local word = vim.fn.expand("<cword>")
+          local replacement = vim.fn.input('Replace "' .. word .. '" with: ')
+          if replacement == "" then
+            return
+          end
+          vim.cmd("%s/\\<" .. word .. "\\>/" .. replacement .. "/g")
+        end,
+        desc = "Replace word under cursor",
+        mode = "n",
+      },
+    })
+  end,
 }
